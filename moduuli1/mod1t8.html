@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul id="target"></ul>
+<script>
+  let startStr = prompt('Start year:');
+  let endStr = prompt('End year:');
+  start = parseInt(startStr);
+  end = parseInt(endStr);
+  leapYears = [];
+  for (i = start; i <= end; i++) {
+    if (i % 400 === 0) {
+      leapYears.push(i);
+    } else if (i % 4 === 0) {
+      if (i % 100 !== 0) {
+        leapYears.push(i);
+      }
+
+    }
+  }
+  console.log(leapYears)
+  let list = document.getElementById("target");
+  for (let k = 0; k < leapYears.length; k++) {
+    let li = document.createElement("li")
+    li.innerHTML = leapYears[k]
+    list.appendChild(li)
+  }
+</script>
+</body>
+</html>

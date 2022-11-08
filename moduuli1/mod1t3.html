@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="sum"></p>
+<p id="product"></p>
+<p id="average"></p>
+<script>
+  'use strict'
+  let int1str = prompt('1st number:')
+  let int2str = prompt('2nd number:')
+  let int3str = prompt('3rd number:')
+  let int1 = parseInt(int1str)
+  let int2 =parseInt(int2str)
+  let int3 = parseInt(int3str)
+  document.querySelector("#sum").innerHTML = int1 + int2 + int3
+  document.querySelector("#product").innerHTML = int1 * int2 * int3
+  document.querySelector("#average").innerHTML = (int1 + int2 + int3) / 3
+</script>
+
+</body>
+</html>

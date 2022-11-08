@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="target"></p>
+<script>
+  'use strict';
+  let sum;
+  let rnd
+  sum = 0;
+  rnd = 0;
+  let diceStr = prompt('How many dice?');
+  let dice = parseInt(diceStr);
+  for (let i = 0; i <= dice; i++) {
+    rnd = Math.floor(Math.random() * 6) + 1;
+    sum = sum + rnd;
+  }
+  document.querySelector('#target').innerHTML = 'summa: ' + sum;
+</script>
+</body>
+</html>
