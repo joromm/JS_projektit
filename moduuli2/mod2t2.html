@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ol id="target">
+
+</ol>
+<script>
+  'use strict'
+  let participantsStr = prompt("How many participants?")
+  let p = parseInt(participantsStr)
+  let names = []
+  for (let i=0; i<p; i++) {
+    name = prompt("anna nimi " + (i+1))
+    names.push(name)
+  }
+
+  let list2 = document.getElementById("target")
+  for (let k=0; k<names.length; k++) {
+    let li = document.createElement("li")
+    li.innerHTML = names[k]
+    list2.appendChild(li)
+  }
+</script>
+</body>
+</html>
