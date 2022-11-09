@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  'use strict'
+  let numbers = [];
+  let numberStr = prompt('give number');
+  let number = parseInt(numberStr)
+  while (!(number in numbers)) {
+    numbers.push(number);
+    numberStr = prompt('give number');
+    number = parseInt(numberStr);
+
+  }
+  numbers.sort();
+  for (let i = 0; i < numbers.length; i++) {
+    console.log(numbers[i]);
+  }
+</script>
+</body>
+</html>

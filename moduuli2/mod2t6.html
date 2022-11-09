@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul id="target">
+</ul>
+<script>
+  'use strict';
+
+  function dice() {
+    return Math.floor(Math.random() * 6) + 1;
+  }
+
+  let rolls = [];
+  let roll = 0;
+  while (roll !== 6) {
+    roll = dice();
+    rolls.push(roll);
+  }
+
+
+  let list = document.getElementById('target');
+  for (let k = 0; k < rolls.length; k++) {
+    let li = document.createElement('li');
+    li.innerHTML = rolls[k];
+    list.appendChild(li);
+  }
+
+
+</script>
+
+</body>
+</html>

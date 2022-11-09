@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="target"></p>
+<script>
+  function concat(list) {
+    let join = '';
+    for (let i = 0; i < list.length; i++) {
+      join += list[i];
+    }
+    return join;
+  }
+
+  list = ['jarmo', 'jarmo', 'mauri', 'petteri'];
+  joined = concat(list);
+  document.querySelector('#target').innerHTML = joined
+</script>
+</body>
+</html>
+
+<!--document.querySelector('#target').innerHtml += '<li>g$()</li>';-->

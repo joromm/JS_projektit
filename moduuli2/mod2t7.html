@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul id="target">
+</ul>
+<script>
+  function dice(sides) {
+    return Math.floor(Math.random() * sides) + 1;
+  }
+
+  const sidesStr = prompt("how many sides?")
+  const sides = parseInt(sidesStr)
+  let rolls = [];
+  let roll = 0;
+  while (roll !== sides) {
+    roll = dice(sides);
+    rolls.push(roll);
+  }
+
+  let list = document.getElementById('target');
+  for (let k = 0; k < rolls.length; k++) {
+    let li = document.createElement('li');
+    li.innerHTML = rolls[k];
+    list.appendChild(li);
+  }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let i = 0;
+  let numberStr = prompt('give number, stop with 0:');
+  let number = parseInt(numberStr);
+  let numbers = [];
+  while (number !== 0) {
+    numbers.push(number);
+    numberStr = prompt('give number, stop with 0:');
+    number = parseInt(numberStr);
+  }
+  numbers.sort();
+  numbers.reverse();
+  for (let i = 0; i < numbers.length; i++) {
+    console.log(numbers[i])
+  }
+</script>
+</body>
+</html>

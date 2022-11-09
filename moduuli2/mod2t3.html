@@ -5,6 +5,23 @@
     <title>Title</title>
 </head>
 <body>
-
+<ul id="target">
+</ul>
+<script>
+  'use strict';
+  let names = [];
+  for (let i = 0; i < 6; i++) {
+    name = prompt('anna nimi: ' + (i + 1));
+    names.push(name);
+  }
+  names.sort();
+  names.reverse();
+  let list = document.getElementById("target")
+  for (let i = 0; i<names.length; i++) {
+    let li = document.createElement("li")
+    li.innerHTML = names[i]
+    list.appendChild(li)
+  }
+</script>
 </body>
 </html>
