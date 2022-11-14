@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  'use strict';
+  let list1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+  function even(list) {
+    let list2 = [];
+    for (let i = list[0]; i <= list.length; i++) {
+      if (i % 2 === 0) {
+        list2.push(i);
+      }
+    }
+    return list2;
+
+  }
+
+  let list3 = even(list1);
+  console.log(list1)
+  console.log(list3)
+
+
+</script>
+</body>
+</html>
