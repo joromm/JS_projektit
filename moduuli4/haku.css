@@ -1,0 +1,45 @@
+.container1 {
+    width: 60%;
+    margin: auto;
+}
+
+form {
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+html {
+    font-family: 'Roboto', sans-serif;
+}
+
+p {
+    text-align: center;
+    margin: auto;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.summary {
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.sarja {
+    background-color: #ccffcc;
+    margin: 1rem;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+a {
+    display: block;
+    text-align: center;
+    padding-top: 1rem;
+}
