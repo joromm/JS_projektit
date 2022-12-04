@@ -26,6 +26,10 @@ function pilkku(lista) {
   return string;
 }
 
+function clear(element) {
+  document.getElementById(element).innerHTML = '';
+}
+
 // const div1 = document.createElement('div');
 // document.querySelector('body').appendChild(div1);
 
@@ -33,12 +37,19 @@ const container = document.createElement('div');
 container.classList.add('container1');
 document.querySelector('body').appendChild(container);
 
+let searchCount = 0;
+
 document.querySelector('form').addEventListener('submit', async function(evt) {
   try {
     evt.preventDefault();
     const sarjat = await fetchJson(
         apiurl + document.querySelector('#query').value);
     console.log(sarjat);
+
+    if (searchCount > 0) {
+      container.innerHTML = '';
+    }
+    searchCount++;
 
     for (let i = 0; i < sarjat.length; i++) {
       const div = document.createElement('div');
@@ -56,15 +67,25 @@ document.querySelector('form').addEventListener('submit', async function(evt) {
       img.alt = 'medium image';
       div.appendChild(img);
 
-      const a = document.createElement('a');
-      a.setAttribute('target', '_blank');
-      a.href = sarjat[i]['show']['url'];
-      a.innerText = 'link to details';
-      div.appendChild(a);
+      const dialog = document.createElement('dialog');
+      div.appendChild(dialog);
+
+      const div2 = document.createElement('div');
+      div2.classList.add('buttondiv');
+      div.appendChild(div2);
+      const button = document.createElement('button');
+      button.innerText = 'Details';
+      div2.appendChild(button);
+      button.addEventListener('click', function() {
+        dialog.showModal();
+        const iframe = document.createElement('iframe');
+        iframe.src = sarjat[i]['show']['url'];
+        dialog.appendChild(iframe);
+      });
 
       const p2 = document.createElement('p');
       p2.innerText = strip(sarjat[i]['show']['summary']);
-      p2.classList.add('summary')
+      p2.classList.add('summary');
       div.appendChild(p2);
 
       const p3 = document.createElement('p');

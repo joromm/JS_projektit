@@ -38,9 +38,13 @@ img {
     margin-right: auto;
 }
 
-a {
-    display: block;
-    text-align: center;
-    padding-top: 1rem;
+
+iframe {
+    width: 50rem;
+    height: 40rem;
 }
 
+.buttondiv {
+    padding-top: 1rem;
+    text-align: center;
+}
